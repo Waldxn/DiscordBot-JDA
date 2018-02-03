@@ -10,4 +10,11 @@ public class Ref {
     public static String EMAIL = "Contact Us: business@ethereal.services, or PM a CEO on Discord";
     public static String PORTFOLIO = "Portfolio: Being built";
 
+    public static int getInteger(String s) {
+        try {
+            return Integer.parseInt(s);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
 }
