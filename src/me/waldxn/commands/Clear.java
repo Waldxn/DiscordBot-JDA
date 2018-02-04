@@ -25,7 +25,7 @@ public class Clear extends ListenerAdapter {
                     int amount = Ref.getInteger(command[1]);
                     MessageHistory history = event.getChannel().getHistory();
                     List<Message> msgs;
-                    msgs = history.retrievePast(amount).complete();
+                    msgs = history.retrievePast(amount + 1).complete();
                     event.getChannel().deleteMessages(msgs).queue();
                 }
             }
