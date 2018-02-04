@@ -1,7 +1,7 @@
 package me.waldxn.commands;
 
-import me.waldxn.Main;
 import me.waldxn.Ref;
+import me.waldxn.Main;
 import me.waldxn.managers.Orders;
 import net.dv8tion.jda.core.entities.Member;
 import net.dv8tion.jda.core.entities.Role;

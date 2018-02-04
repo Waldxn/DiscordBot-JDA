@@ -3,6 +3,7 @@ package me.waldxn;
 public class Ref {
 
     static String TOKEN = "NDA5NDQ0MzAwNjExNTE4NDY0.DVesjg.DOUkS0D4XqQhnjLvVri3E78wm_0";
+    static String GUILD_ID = "409003187689750528";
     public static String CLIENT_ID = "409444300611518464";
     public static String PREFIX = "-";
     public static String WEBSITE = "Website: Currently under construction";
