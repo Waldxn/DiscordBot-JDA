@@ -26,6 +26,7 @@ public class Main {
             jda.addEventListener(new Order());
             jda.addEventListener(new Partner());
             jda.addEventListener(new Staff());
+            jda.addEventListener(new Support());
             guildController = jda.getGuildById(Ref.GUILD_ID).getController();
         } catch (LoginException | InterruptedException e) {
             e.printStackTrace();
@@ -41,5 +42,6 @@ public class Main {
         commands.put(Order.getCommandName(), Order.getDescription());
         commands.put(Partner.getCommandName(), Partner.getDescription());
         commands.put(Staff.getCommandName(), Staff.getDescription());
+        commands.put(Support.getCommandName(), Support.getDescription());
     }
 }

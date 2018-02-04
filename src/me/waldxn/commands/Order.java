@@ -25,7 +25,7 @@ public class Order extends ListenerAdapter {
                 Orders.orderRequest.add(event.getMember());
                 event.getGuild().getTextChannelById("409485023855771653").sendMessage(event.getMember().getAsMention() + " is looking for a commission!").queue();
             } else {
-                event.getChannel().sendMessage(event.getMember().getAsMention() + ", You have already submitted a request. Please be patient.").queue();
+                event.getChannel().sendMessage(event.getMember().getAsMention() + ", you have already submitted a request. Please be patient.").queue();
             }
         }
 
@@ -50,6 +50,7 @@ public class Order extends ListenerAdapter {
     }
 
     public static String getDescription() {
-        return "-order - Submits a commission request";
+        return "-order - Submits a commission request \n" +
+                "-claimorder [User] - Claims the commission order";
     }
 }
