@@ -9,5 +9,4 @@ public class Orders {
 
     public static List<Member> orderRequest = new ArrayList<>();
 
-
 }
