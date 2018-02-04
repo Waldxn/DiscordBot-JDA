@@ -4,8 +4,7 @@ import me.waldxn.Ref;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class Bot extends ListenerAdapter {
-
+public class Test extends ListenerAdapter {
 
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
@@ -15,16 +14,8 @@ public class Bot extends ListenerAdapter {
             return;
         }
 
-        if (command[0].equalsIgnoreCase("-bot")) {
-            event.getChannel().sendMessage(event.getMember().getAsMention() + ", you can view my source code at: https://github.com/Waldxn/EtherealBot.").queue();
+        if (command[0].equalsIgnoreCase("-test")) {
+            event.getChannel().sendMessage("Test worked").queue();
         }
-    }
-
-    public static String getCommandName(){
-        return "Bot";
-    }
-
-    public static String getDescription() {
-        return "-bot - Sends a link to my source code";
     }
 }
