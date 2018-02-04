@@ -38,4 +38,12 @@ public class Staff extends ListenerAdapter {
             }
         }
     }
+
+    public static String getCommandName(){
+        return "Staff";
+    }
+
+    public static String getDescription() {
+        return "-staff - Displays number of staff online";
+    }
 }

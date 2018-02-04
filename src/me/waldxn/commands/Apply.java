@@ -34,4 +34,12 @@ public class Apply extends ListenerAdapter {
             }
         }
     }
+
+    public static String getCommandName(){
+        return "Apply";
+    }
+
+    public static String getDescription() {
+        return "-apply [builder/developer/graphics] - Sends an application link";
+    }
 }

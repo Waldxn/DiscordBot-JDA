@@ -19,4 +19,12 @@ public class Bot extends ListenerAdapter {
             event.getChannel().sendMessage(event.getMember().getAsMention() + ", you can view my source code at: https://github.com/Waldxn/EtherealBot.").queue();
         }
     }
+
+    public static String getCommandName(){
+        return "Bot";
+    }
+
+    public static String getDescription() {
+        return "-bot - Sends a link to my source code";
+    }
 }

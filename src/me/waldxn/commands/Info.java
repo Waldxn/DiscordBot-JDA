@@ -22,4 +22,12 @@ public class Info extends ListenerAdapter {
                     Ref.PORTFOLIO + "\n").queue();
         }
     }
+
+    public static String getCommandName(){
+        return "Info";
+    }
+
+    public static String getDescription() {
+        return "-info - Displays all important Ethereal links";
+    }
 }

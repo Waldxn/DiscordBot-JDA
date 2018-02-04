@@ -22,4 +22,12 @@ public class Partner extends ListenerAdapter {
                     + ceo.getAsMention()).queue();
         }
     }
+
+    public static String getCommandName(){
+        return "Partner";
+    }
+
+    public static String getDescription() {
+        return "-partner - For if you want to partner with Ethereal";
+    }
 }

@@ -31,4 +31,12 @@ public class Clear extends ListenerAdapter {
             }
         }
     }
+
+    public static String getCommandName(){
+        return "Clear";
+    }
+
+    public static String getDescription() {
+        return "-clear [number] - Clears a defined number of messages";
+    }
 }

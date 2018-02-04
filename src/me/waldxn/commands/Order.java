@@ -44,4 +44,12 @@ public class Order extends ListenerAdapter {
             }
         }
     }
+
+    public static String getCommandName(){
+        return "Order";
+    }
+
+    public static String getDescription() {
+        return "-order - Submits a commission request";
+    }
 }
