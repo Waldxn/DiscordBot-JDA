@@ -18,7 +18,7 @@ public class Partner extends ListenerAdapter {
 
         if (command[0].equalsIgnoreCase("-partner")) {
             event.getChannel().sendMessage(event.getMember().getAsMention() +
-                    ", if you are looking to for a partnership, feel free to email us at business@ethereal.services, or PM a "
+                    ", if you are looking for a partnership, feel free to email us at business@ethereal.services, or PM a "
                     + ceo.getAsMention()).queue();
         }
     }

@@ -23,6 +23,7 @@ public class Main {
             jda.addEventListener(new Order());
             jda.addEventListener(new Staff());
             jda.addEventListener(new Bot());
+            jda.addEventListener(new Partner());
             guildController = jda.getGuildById(Ref.GUILD_ID).getController();
         } catch (LoginException | InterruptedException e) {
             e.printStackTrace();
