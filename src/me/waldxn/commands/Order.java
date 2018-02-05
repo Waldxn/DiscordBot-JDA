@@ -13,7 +13,7 @@ public class Order extends ListenerAdapter {
     @Override
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         String[] command = event.getMessage().getContentRaw().split(" ");
-        Role client = event.getGuild().getRoleById("409004206666547202");
+        Role client = event.getGuild().getRoleById(Ref.CLIENT_ROLE);
 
         if (!command[0].startsWith(Ref.PREFIX)) {
             return;

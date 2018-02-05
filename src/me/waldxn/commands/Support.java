@@ -4,14 +4,14 @@ import me.waldxn.Main;
 import me.waldxn.Ref;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.Permission;
-import net.dv8tion.jda.core.entities.*;
+import net.dv8tion.jda.core.entities.Category;
+import net.dv8tion.jda.core.entities.Member;
+import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-import javax.xml.soap.Text;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
 public class Support extends ListenerAdapter {
 
@@ -25,7 +25,7 @@ public class Support extends ListenerAdapter {
             return;
         }
 
-        if (command[0].equalsIgnoreCase("-support") && command.length == 1) {
+        if (command[0].equalsIgnoreCase("-ticket") && command.length == 1) {
             if (!activeTickets.contains(event.getMember())) {
                 createSupportChannel(event.getMember());
             } else {
@@ -33,7 +33,7 @@ public class Support extends ListenerAdapter {
             }
         }
 
-        if (command[0].equalsIgnoreCase("-finishedsupport")) {
+        if (command[0].equalsIgnoreCase("-closeticket")) {
             if (event.getMessage().getCategory() == Main.guildController.getGuild().getCategoryById(Ref.SUPPORT_ID)) {
                 deleteSupportChannel(event.getChannel());
             }
@@ -69,7 +69,7 @@ public class Support extends ListenerAdapter {
     }
 
     public static String getDescription() {
-        return "-support - Opens a support ticket with staff \n" +
-                "-finishedsupport - Closes the support ticket with staff";
+        return "-ticket - Opens a support ticket with staff \n" +
+                "-closeticket - Closes the support ticket with staff";
     }
 }

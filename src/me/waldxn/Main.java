@@ -19,13 +19,10 @@ public class Main {
             JDA jda = new JDABuilder(AccountType.BOT)
                     .setToken(Ref.TOKEN)
                     .buildBlocking();
-            jda.addEventListener(new Apply());
             jda.addEventListener(new Clear());
             jda.addEventListener(new Help());
             jda.addEventListener(new Info());
             jda.addEventListener(new Order());
-            jda.addEventListener(new Partner());
-            jda.addEventListener(new Staff());
             jda.addEventListener(new Support());
             guildController = jda.getGuildById(Ref.GUILD_ID).getController();
         } catch (LoginException | InterruptedException e) {
@@ -35,13 +32,10 @@ public class Main {
     }
 
     private static void saveCommands(){
-        commands.put(Apply.getCommandName(), Apply.getDescription());
         commands.put(Clear.getCommandName(), Clear.getDescription());
         commands.put(Help.getCommandName(), Help.getDescription());
         commands.put(Info.getCommandName(), Info.getDescription());
         commands.put(Order.getCommandName(), Order.getDescription());
-        commands.put(Partner.getCommandName(), Partner.getDescription());
-        commands.put(Staff.getCommandName(), Staff.getDescription());
         commands.put(Support.getCommandName(), Support.getDescription());
     }
 }
